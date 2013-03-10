@@ -1,4 +1,7 @@
 Portfolio::Application.routes.draw do
+  resources :inquiries
+
+
   resources :projects
 
 
