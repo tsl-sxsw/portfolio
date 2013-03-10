@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a href="index.html" class="brand">MY STUFFS</a>
+      <a href="/projects" class="brand">MY STUFFS</a>
     </div>
   </div>
 </div>
@@ -36,38 +36,16 @@
     <div class="row">
       <div class="span12">
         <div id="gallery_container">
-          <div class="photo illustration">
-            <img src="assets/mona_lisa_1.jpg" />
-            <a href="portfolio-item.html" class="mask">
-              <h3>Mona Lisa</h3>
-              <small>photo illustration</small>
+          <% @projects.each do |project| %>
+          <div class="<%= project.tags %>">
+            <img src="/assets/<%= project.image_1 %>" />
+            <a href="/projects/<%= project.id %>" class="mask">
+              <h3><%= project.title %></h3>
+              <small><%= project.tags %></small>
               <div class="more">+</div>
             </a>
           </div>
-          <div class="photo print web illustration">
-            <img src="assets/the_starry_night_1.jpg" />
-            <a href="portfolio-item.html" class="mask">
-              <h3>The Starry Night</h3>
-              <small>photo print web illustration</small>
-              <div class="more">+</div>
-            </a>
-          </div>
-          <div class="photo web print">
-            <img src="assets/the_last_supper_1.jpg" />
-            <a href="portfolio-item.html" class="mask">
-              <h3>The Last Supper</h3>
-              <small>photo web print</small>
-              <div class="more">+</div>
-            </a>
-          </div>
-          <div class="photo illustration print">
-            <img src="assets/the_creation_of_adam_1.jpg" />
-            <a href="portfolio-item.html" class="mask">
-              <h3>The Creation of Adam</h3>
-              <small>photo illustration print</small>
-              <div class="more">+</div>
-            </a>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>
