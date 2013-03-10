@@ -1,33 +1,75 @@
-<h1>Listing projects</h1>
+<div class="navbar navbar-inverse navbar-static-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a href="index.html" class="brand">MY STUFFS</a>
+    </div>
+  </div>
+</div>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Tags</th>
-    <th>Image 1</th>
-    <th>Image 2</th>
-    <th>Image 3</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @projects.each do |project| %>
-  <tr>
-    <td><%= project.title %></td>
-    <td><%= project.description %></td>
-    <td><%= project.tags %></td>
-    <td><%= project.image_1 %></td>
-    <td><%= project.image_2 %></td>
-    <td><%= project.image_3 %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Project', new_project_path %>
+<div id="portfolio">
+  <div class="container">
+    <div class="section_header">
+      <h3>Portfolio</h3>
+    </div>
+    <div class="row">
+      <div class="span12">
+        <div id="filters_container">
+          <ul id="filters">
+            <li><a href="#" data-filter="*" class="active">All</a></li>
+            <li class="separator">/</li>
+            <li><a href="#" data-filter=".art">Art</a></li>
+            <li class="separator">/</li>
+            <li><a href="#" data-filter=".illustration">Illustration</li>
+            <li class="separator">/</li>
+            <li><a href="#" data-filter=".print">Print</a></li>
+            <li class="separator">/</li>
+            <li><a href="#" data-filter=".web">Web</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span12">
+        <div id="gallery_container">
+          <div class="photo illustration">
+            <img src="assets/mona_lisa_1.jpg" />
+            <a href="portfolio-item.html" class="mask">
+              <h3>Mona Lisa</h3>
+              <small>photo illustration</small>
+              <div class="more">+</div>
+            </a>
+          </div>
+          <div class="photo print web illustration">
+            <img src="assets/the_starry_night_1.jpg" />
+            <a href="portfolio-item.html" class="mask">
+              <h3>The Starry Night</h3>
+              <small>photo print web illustration</small>
+              <div class="more">+</div>
+            </a>
+          </div>
+          <div class="photo web print">
+            <img src="assets/the_last_supper_1.jpg" />
+            <a href="portfolio-item.html" class="mask">
+              <h3>The Last Supper</h3>
+              <small>photo web print</small>
+              <div class="more">+</div>
+            </a>
+          </div>
+          <div class="photo illustration print">
+            <img src="assets/the_creation_of_adam_1.jpg" />
+            <a href="portfolio-item.html" class="mask">
+              <h3>The Creation of Adam</h3>
+              <small>photo illustration print</small>
+              <div class="more">+</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
