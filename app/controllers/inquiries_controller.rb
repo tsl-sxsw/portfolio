@@ -1,4 +1,6 @@
 class InquiriesController < ApplicationController
+  http_basic_authenticate_with :name => "jeff", :password => "hockey", :except => [:new, :create]
+
   # GET /inquiries
   # GET /inquiries.json
   def index
