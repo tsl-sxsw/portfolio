@@ -126,17 +126,6 @@ end
 - `rake db:migrate` Create the actual table in your database
 - Open `http://localhost:3000/<table name (plural)>` in Chrome
 
-### Clone a repository from GitHub
-
-- Navigate to `~/dev/sxsw` in Terminal
-- `git clone https://github.com/tsl-sxsw/portfolio` Download the code and version history
-- `cd portfolio` Navigate into the repository
-- `git checkout v1` Jump back to the first version
-- `bundle install` Install all the libraries that the app needs
-- `rake db:migrate` Create your database and tables
-- `rake db:seed` Pre-populates database with dummy data
-- `rails server` Start the server (don't forget to quit any other running servers with CTRL-C)
-
 ### Move your assets into the pipeline
 
 - Place all CSS files into `app/assets/stylesheets`
@@ -146,12 +135,23 @@ end
 - Images can be located at `http://localhost:3000/assets/<filename>`
 - Delete the `app/stylesheets/scaffolds.css.scss` file.
 
+### Clone a repository from GitHub
+
+- Navigate to `~/dev/sxsw` in Terminal
+- `git clone https://github.com/tsl-sxsw/portfolio` Download the code and version history
+- `cd portfolio` Navigate into the repository
+- `git checkout v2` Jump back to the first version
+- `bundle install` Install all the libraries that the app needs
+- `rake db:migrate` Create your database and tables
+- `rake db:seed` Pre-populates database with dummy data
+- `rails server` Start the server (don't forget to quit any other running servers with CTRL-C)
+
 ### Sync your code with the instructor in case you get behind
 
 - Open up a new Terminal tab with CMD-T and make sure you are in the app's folder
 - `git add -A` Collect the changes you made to the code since the last saved version
 - `git stash` Throw them all away
-- `git checkout v2` Jump to the next version
+- `git checkout v2` Jump to the right version
 
 ### Generating dynamic HTML
 
